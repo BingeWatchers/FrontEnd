@@ -1,14 +1,31 @@
-language: node_js
-node_js:
-  - node
-  - lts/*
-cache:
-  directories:
-    - ~/.npm
-before_script:
-  - npm install -g npm@latest
-script:
-  - npm ci
-  - npx jest --ci
-notifications:
-  email: false
+{
+  "language": "node_js",
+  "os": [
+    "linux"
+  ],
+  "dist": "xenial",
+  "node_js": [
+    "node",
+    "lts/*"
+  ],
+  "cache": {
+    "directories": [
+      "~/.npm"
+    ]
+  },
+  "before_script": [
+    "npm install -g npm@latest"
+  ],
+  "script": [
+    "npm ci",
+    "npx jest --ci"
+  ],
+  "notifications": {
+    "email": [
+      {
+        "enabled": false
+      }
+    ]
+  }
+}
+ 
